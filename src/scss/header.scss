@@ -1,0 +1,57 @@
+.header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $hr;
+  padding: 0 16px;
+  justify-content: space-between;
+  gap: 16px;
+
+  &__burger {
+    background-image: url('../img/burger.svg');
+    height: 40px;
+    min-width: 40px;
+  }
+
+  &__logo {
+    flex-grow: 1;
+  }
+  &__actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__call {
+    background-image: url('../img/call.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__chat {
+    background-image: url('../img/chat.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__profile {
+    background-image: url('../img/profile.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__repair {
+    background-image: url('../img/repair.svg');
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 32px;
+  }
+
+  &__checkstatus {
+    background-image: url('../img/checkstatus.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__text {
+    display: none;
+    font-weight: 500;
+  }
+}

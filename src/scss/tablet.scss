@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) and (min-width: 1119.98px) {
+  .header__repair {
+    width: 70px;
+  }
+  .header__repair::before {
+    content: '';
+    border-left: 2px solid $decorLine;
+    margin-right: 58px;
+  }
+  .header__burger {
+    width: 70px;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-size: 32px;
+  }
+  .header__burger::before {
+    content: '';
+    border-right: 2px solid $decorLine;
+    margin-left: 58px;
+  }
+}

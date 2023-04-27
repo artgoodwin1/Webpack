@@ -1,0 +1,117 @@
+.burger {
+  min-width: 320px;
+  padding: 16px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-weight: 500;
+  position: absolute;
+  z-index: 1;
+  background-color: $bgColor;
+  transition: transform 0.9s ease;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+  gap: 16px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__button {
+    background-image: url('../img/burger-open.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__logo {
+    flex-grow: 1;
+  }
+  &__search {
+    background-image: url('../img/search.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__list {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    color: black;
+    transition: 0.7s;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__link:hover {
+    color: $chocolate;
+
+    border-left: 4px solid $linkHover;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    filter: contrast(200%);
+  }
+  &__link:focus {
+    color: $gray;
+    margin: 0 -16px;
+    padding: 0 16px;
+
+    border-left: 4px solid $linkFocus;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    font-size: 16px;
+    filter: none;
+  }
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.burger-footer {
+  align-self: end;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+  &__call {
+    background-image: url('../img/call.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__chat {
+    background-image: url('../img/chat.svg');
+    height: 40px;
+    width: 40px;
+  }
+  &__profile {
+    background-image: url('../img/profile.svg');
+    height: 40px;
+    width: 40px;
+  }
+
+  &__tel {
+    font-size: 24px;
+  }
+}
+
+.language {
+  display: flex;
+  gap: 7px;
+
+  &__item {
+    display: none;
+  }
+  &__label {
+    cursor: pointer;
+  }
+  &__item:checked + label {
+    color: $gray;
+  }
+}

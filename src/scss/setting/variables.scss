@@ -1,0 +1,44 @@
+$bgColor: #fff;
+$text: #24292e;
+$chocolate: chocolate;
+$linkHover: #41b4f6;
+$linkFocus: #41f6d7;
+$gray: #7e7e82;
+$hr: #d9fff5;
+$navHover: #b8ffec;
+$navFocus: aqua;
+$decorLine: #eaeaea;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: "TTLakes";
+  font-weight: normal;
+  background-color: $bgColor;
+  color: $text;
+}
+a {
+  text-decoration: none;
+  color: $text;
+}
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: "TTLakes";
+  font-weight: 500;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

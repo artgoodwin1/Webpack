@@ -1,0 +1,43 @@
+@media screen and (min-width: 1120px) {
+  .header__item:nth-child(-n + 3) {
+    display: none;
+  }
+  .header__burger,
+  .header__logo {
+    display: none;
+  }
+  .header {
+    float: right;
+    border: none;
+  }
+  .header__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header__text {
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .navigation {
+    clear: right;
+  }
+  .navigation__list {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    row-gap: 10px;
+    justify-content: space-between;
+  }
+
+  .hidden {
+    transform: translateY(0%);
+  }
+  .burger {
+    position: static;
+    float: left;
+  }
+  .burger__button {
+    display: none;
+  }
+}

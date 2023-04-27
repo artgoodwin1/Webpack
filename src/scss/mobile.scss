@@ -1,0 +1,17 @@
+@media screen and (max-width: 767.98px) {
+  .header__item:nth-child(-n + 3) {
+    display: none;
+  }
+
+  .header__repair {
+    width: 70px;
+  }
+  .header__repair::before {
+    content: '';
+    border-left: 2px solid $decorLine;
+    margin-right: 58px;
+  }
+  .main__container {
+    flex-wrap: wrap;
+  }
+}

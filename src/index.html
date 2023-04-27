@@ -1,16 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
-  </body>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <article class="burger hidden">
+        <div class="burger__header">
+            <button class="burger__button"></button>
+            <a href="#" class="burger__logo"><img src="./img/logo.svg" alt="Лого"></a>
+            <button class="burger__search"></button>
+        </div>
+        <nav class="burger__navigation">
+            <ul class="burger__list">
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Ремонт техники">Ремонт
+                        техники</a>
+                </li>
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Услуги и сервисы">Услуги и
+                        сервисы</a></li>
+                <li class="burger__item"><a href="#" class="burger__link"
+                        data-hover="Корпоративным клиентам">Корпоративным клиентам</a></li>
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Продавцам техники">Продавцам
+                        техники</a></li>
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Партнерам">Партнерам</a></li>
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Производителям">Производителям</a>
+                </li>
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Наши сервисные центры">Наши
+                        сервисные центры</a></li>
+                <li class="burger__item"><a href="#" class="burger__link" data-hover="Контакты">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="burger-footer burger__footer">
+            <ul class="burger-footer__list">
+                <li class="burger-footer__item"><button class="burger-footer__call"></button></li>
+                <li class="burger-footer__item"><button class="burger-footer__chat"></button></li>
+                <li class="burger-footer__item"><button class="burger-footer__profile"></button></li>
+            </ul>
+            <a href="mailto:mail@cps.com" class="burger-footer__mail">mail@cps.com</a>
+            <a href="tel:+78008908900" class="burger-footer__tel">8 800 890 8900</a>
+            <div class="language burger__language">
+                <input type="radio" class="language__item" id="radio-ru" name="lang" value="RU" checked></input>
+                <label for="radio-ru" class="language__label">RU</label>
+                <input type="radio" class="language__item" id="radio-en" name="lang" value="EN"></input>
+                <label for="radio-en" class="language__label">EN</label>
+                <input type="radio" class="language__item" id="radio-ch" name="lang" value="CH"></input>
+                <label for="radio-ch" class="language__label">CH</label>
+            </div>
+        </div>
+    </article>
+
+
+    <header class="header">
+        <button class="header__burger"></button>
+        <a href="#" class="header__logo"><img src="./img/logo.svg" alt="Лого"></a>
+        <ul class="header__actions">
+            <li class="header__item"><button class="header__call"></button></li>
+            <li class="header__item"><button class="header__chat"></button></li>
+            <li class="header__item"><button class="header__profile"></button></li>
+            <li class="header__item"><span class="header__text">Оставить заявку</span><button
+                    class="header__repair"></button></li>
+            <li class="header__item"><span class="header__text">Статус ремонта</span><button
+                    class="header__checkstatus"></button></li>
+        </ul>
+    </header>
+
+    <main class="main">
+        <h1 class="main__title">Услуги и сервисы</h1>
+        <nav class="main__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">Ремонтируемые бренды</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Дополнительные услуги</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Цены на услуги</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Адреса сервисных центров</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Специальные цены</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div class="main__container">
+            <section class="about">
+                <p class="about__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>
+
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                    большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                    и, в свою
+                    очередь, советуют нас родным и близким.
+                </p>
+                <button class="about__button">Читать далее</button>
+            </section>
+
+            <picture class="main__pic">
+                <source srcset="./img/main-img-mobile.png" media="(max-width: 767.98px)">
+                <source srcset="./img/main-img-tablet.png" media="(min-width: 768px) and (max-width: 1119.98px)">
+                <source srcset="./img/main-img-desktop.png" media="(min-width: 1120px)">
+                <img src="./images/main-img-mobile.png" alt="Часы работы">
+            </picture>
+        </div>
+
+    </main>
+</body>
+
 </html>
