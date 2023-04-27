@@ -64,6 +64,9 @@
     font-size: 16px;
     filter: none;
   }
+  & button:hover {
+    animation: rotate-colors 3s linear infinite;
+  }
 }
 
 .hidden {

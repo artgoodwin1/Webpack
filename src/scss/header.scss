@@ -54,4 +54,7 @@
     display: none;
     font-weight: 500;
   }
+  & button:hover {
+    animation: rotate-colors 3s linear infinite;
+  }
 }
