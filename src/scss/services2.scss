@@ -1,4 +1,4 @@
-.services {
+.services2 {
   margin: 16px;
 
 
@@ -28,7 +28,7 @@
 }
 
 &__item {
-  height: 72px;
+  height: 160px;
   align-self: center;
   border: 2px solid $decorLine;
   border-radius: 10px;
@@ -36,10 +36,13 @@
   box-sizing: border-box;
   width: 240px;
   flex-shrink: 0;
-  
+  padding: 16px;
+}
+&__text {
+  align-self: flex-start;
 }
 &__img {
-  vertical-align: middle;
+  align-self: flex-end;
 }
 &__pagination {
   text-align: center;
@@ -62,8 +65,4 @@
   justify-content: space-between;
   align-items: center;
 }
-}
-
-:root {
-  --swiper-theme-color:#B5B6BC;
 }

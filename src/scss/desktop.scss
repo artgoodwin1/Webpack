@@ -34,17 +34,43 @@
     transform: translateY(0%);
   }
   .burger {
-    position: static;
+    position: fixed;
     float: left;
   }
   .burger__button {
     display: none;
   }
+
+  main {
+    margin-left: 321px;
+  }
+  .services, .services2 {
+    margin-left: 338px;
+  }
+
+  .button-details {
+    padding-left: 16px;
+    font-size: 16px;
+  }
+
+  .button-details::before {
+    content: '';
+    background: url(../img/arrow.svg) no-repeat;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 5px;
+    transition: 0.7s ease-in-out;
+  }
+  .button-details--open::before {
+    transform: rotate(180deg);
+  }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1330px) {
   .services {
-    margin-left: 338px;
+    
 
     &__wrapper {
       display: grid;
@@ -59,24 +85,23 @@
     &__pagination {
       display: none;
     }
+  }
 
-    .button-details {
-      padding-left: 16px;
-      font-size: 16px;
+  .services2 {
+    
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 16px;
+      overflow-y: hidden;
+      max-height: 170px;
+      transition: max-height 0.7s ease-in-out;
     }
 
-    .button-details::before {
-      content: '';
-      background: url(../img/arrow.svg) no-repeat;
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      margin-left: -15px;
-      margin-top: 5px;
-      transition: 0.7s ease-in-out;
-    }
-    .button-details--open::before {
-      transform: rotate(180deg);
+    &__pagination {
+      display: none;
     }
   }
 }

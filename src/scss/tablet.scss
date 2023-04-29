@@ -53,4 +53,19 @@
 .button-details--open::before {
   transform: rotate(180deg);
 }
+
+
+.services2__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 16px;
+  overflow-y: hidden;
+  max-height: 170px;
+  transition: max-height 0.7s ease-in-out;
+}
+
+.services2__pagination {
+  display: none;
+}
 }
