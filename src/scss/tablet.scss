@@ -22,7 +22,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1319.98px) {
-.services__wrapper {
+.brands__wrapper {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
@@ -32,7 +32,7 @@
   transition: max-height 0.7s ease-in-out;
 }
 
-.services__pagination {
+.brands__pagination {
   display: none;
 }
 
@@ -55,7 +55,7 @@
 }
 
 
-.services2__wrapper {
+.equipment__wrapper {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
@@ -65,7 +65,7 @@
   transition: max-height 0.7s ease-in-out;
 }
 
-.services2__pagination {
+.equipment__pagination {
   display: none;
 }
 }

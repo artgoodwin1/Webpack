@@ -6,59 +6,59 @@ Swiper.use ([Navigation, Pagination])
 
 const mediaQuery = "(max-width: 768px)";
 const mediaQueryList = window.matchMedia(mediaQuery);
-const servicesSwiper = document.querySelector(".services__swiper");
+const brandsSwiper = document.querySelector(".brands__swiper");
 let mySwiper;
 let mySwiper2;
 
 function mobileservices() {
     if (mediaQueryList.matches) {
-        mySwiper = new Swiper(".swiper", {
+        mySwiper = new Swiper(".brands__swiper", {
             direction: "horizontal",
             loop: true,
             speed: 500,
             effect: "slider",
             slidesPerView: "auto",
             spaceBetween: 15,
-            wrapperClass: "services__wrapper",
-            slideClass: "services__item",
+            wrapperClass: "brands__wrapper",
+            slideClass: "brands__item",
             modules: [Navigation, Pagination],
 
             pagination: {
-                el: ".services__pagination",
+                el: ".brands__pagination",
                 clickable: true,
                 
             },
 
             navigation: {
-                nextEl: ".services__button",
+                nextEl: ".brands__button",
                 prevEl: ".swiper-button-prev",
             },
         });
 
 
-        mySwiper2 = new Swiper(".swiper2", {
+        mySwiper2 = new Swiper(".equipment__swiper", {
             direction: "horizontal",
             loop: true,
             speed: 500,
             effect: "slider",
             slidesPerView: "auto",
             spaceBetween: 15,
-            wrapperClass: "services2__wrapper",
-            slideClass: "services2__item",
+            wrapperClass: "equipment__wrapper",
+            slideClass: "equipment__item",
             modules: [Navigation, Pagination],
 
             pagination: {
-                el: ".services2__pagination",
+                el: ".equipment__pagination",
                 clickable: true,
                 
             },
 
             navigation: {
-                nextEl: ".services2__button",
+                nextEl: ".equipment__button",
                 prevEl: ".swiper-button-prev",
             },
         });
-    } else if (servicesSwiper.classList.contains("swiper-initialized")) {
+    } else if (brandsSwiper.classList.contains("swiper-initialized")) {
         {
             mySwiper.destroy();
             mySwiper2.destroy();
@@ -66,33 +66,33 @@ function mobileservices() {
     }
 }
 
-const servicesWrapper = document.querySelector(".services__wrapper");
-const servicesWrapper2 = document.querySelector(".services2__wrapper");
-const buttonDetails = document.querySelector(".button-details");
-const buttonDetails2 = document.querySelector(".services2 .button-details");
+const brandsWrapper = document.querySelector(".brands__wrapper");
+const equipmentWrapper = document.querySelector(".equipment__wrapper");
+const brandsButtonDetails = document.querySelector(".brands .button-details");
+const equipmentButtonDetails = document.querySelector(".equipment .button-details");
 
 
-buttonDetails.onclick = function () {
-    servicesWrapper.classList.toggle("services__wrapper--extended");
-    buttonDetails.classList.toggle("button-details--open");
+brandsButtonDetails.onclick = function () {
+    brandsWrapper.classList.toggle("brands__wrapper--extended");
+    brandsButtonDetails.classList.toggle("button-details--open");
     
 
-    if (servicesWrapper.classList.contains("services__wrapper--extended")) {
-        buttonDetails.textContent = "Скрыть";
+    if (brandsWrapper.classList.contains("brands__wrapper--extended")) {
+        brandsButtonDetails.textContent = "Скрыть";
     } else {
-        buttonDetails.textContent = "Показать всё";
+        brandsButtonDetails.textContent = "Показать всё";
     }
 };
 
-buttonDetails2.onclick = function () {
-    servicesWrapper2.classList.toggle("services__wrapper--extended");
-    buttonDetails2.classList.toggle("button-details--open");
+equipmentButtonDetails.onclick = function () {
+    equipmentWrapper.classList.toggle("brands__wrapper--extended");
+    equipmentButtonDetails.classList.toggle("button-details--open");
     
 
-    if (servicesWrapper2.classList.contains("services__wrapper--extended")) {
-        buttonDetails2.textContent = "Скрыть";
+    if (equipmentWrapper.classList.contains("brands__wrapper--extended")) {
+        equipmentButtonDetails.textContent = "Скрыть";
     } else {
-        buttonDetails2.textContent = "Показать всё";
+        equipmentButtonDetails.textContent = "Показать всё";
     }
 };
 
