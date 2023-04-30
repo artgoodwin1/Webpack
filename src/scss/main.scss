@@ -1,12 +1,18 @@
-.main__title {
-  font-size: 28px;
-  padding: 0 16px;
-  border-left: 4px solid $linkFocus;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  white-space: nowrap;
-  float: left;
+.main {
+  padding-bottom: 50px;
+  border-bottom: 1px solid $hr;
+
+  &__title {
+    font-size: 28px;
+    padding: 0 16px;
+    border-left: 4px solid $linkFocus;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    white-space: nowrap;
+    float: left;
+  }
 }
+
 .navigation {
   clear: both;
   &__list {

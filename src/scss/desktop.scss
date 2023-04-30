@@ -41,12 +41,10 @@
     display: none;
   }
 
-  main {
+  main, .services, footer {
     margin-left: 321px;
   }
-  .services {
-    margin-left: 338px;
-  }
+  
 
   .button-details {
     padding-left: 16px;
@@ -66,12 +64,19 @@
   .button-details--open::before {
     transform: rotate(180deg);
   }
+
+  .footer {
+    &__item {
+      width: 30%;
+    }
+    &__item:last-child {
+      text-align: right;
+    }
+  }
 }
 
-@media screen and (min-width: 1330px) {
+@media screen and (min-width: 1350px) {
   .brands {
-    
-
     &__wrapper {
       display: grid;
       grid-template-columns: repeat(4, auto);
@@ -88,8 +93,6 @@
   }
 
   .equipment {
-    
-
     &__wrapper {
       display: grid;
       grid-template-columns: repeat(4, auto);
@@ -102,6 +105,58 @@
 
     &__pagination {
       display: none;
+    }
+  }
+
+  .prices {
+    &__swiper {
+      padding-top: 40px;
+    }
+    &__wrapper {
+      display: grid;
+    }
+    &__item {
+      width: auto;
+      height: auto;
+      border-bottom: 1px solid $decorLine;
+    }
+    &__button {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__repair {
+      min-width: 360px;
+    }
+    &__cost {
+      min-width: 100px;
+    }
+    &__period {
+      min-width: 100px;
+      
+    }
+    &__pagination {
+      display: none;
+    }
+    &__item:first-child .prices__repair::before {
+      content: 'Ремонтные услуги';
+      position: absolute;
+      top: -60px;
+      white-space: nowrap;
+      color: $gray;
+    }
+    &__item:first-child .prices__cost::before {
+      content: 'Цена';
+      position: absolute;
+      top: -60px;
+      white-space: nowrap;
+      color: $gray;
+    }
+    &__item:first-child .prices__period::before {
+      content: 'Срок';
+      position: absolute;
+      top: -60px;
+      white-space: nowrap;
+      color: $gray;
     }
   }
 }

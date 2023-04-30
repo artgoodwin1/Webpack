@@ -1,6 +1,7 @@
-.brands {
-  margin: 16px;
-
+.equipment {
+  padding: 16px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $hr;
 
 &__title {
   color: $gray;
@@ -15,6 +16,7 @@
   min-width: 268px;
   margin: 0;
   margin-bottom: 16px;
+  overflow: hidden;
 }
 
 &__wrapper {
@@ -23,12 +25,12 @@
   display:flex;
 }
 &__wrapper--extended {
-  max-height: 550px !important;
+  max-height: 500px !important;
   
 }
 
 &__item {
-  height: 72px;
+  height: 160px;
   align-self: center;
   border: 2px solid $decorLine;
   border-radius: 10px;
@@ -36,10 +38,13 @@
   box-sizing: border-box;
   width: 240px;
   flex-shrink: 0;
-  
+  padding: 16px;
+}
+&__text {
+  align-self: flex-start;
 }
 &__img {
-  vertical-align: middle;
+  align-self: flex-end;
 }
 &__pagination {
   text-align: center;
@@ -62,8 +67,4 @@
   justify-content: space-between;
   align-items: center;
 }
-}
-
-:root {
-  --swiper-theme-color:#B5B6BC;
 }

@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  padding: 24px;
+  font-size: 14px;
+  color: $gray;
+  justify-content: space-between;
+
+  
+
+  &__item:nth-child(2) {
+    text-align: center;
+  }
+  
+}

@@ -19,53 +19,112 @@
     margin-left: 58px;
   }
 
+  .footer {
+    &__item {
+      width: 30%;
+    }
+    &__item:last-child {
+      text-align: right;
+    }
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1319.98px) {
-.brands__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
-  row-gap: 16px;
-  overflow-y: hidden;
-  max-height: 170px;
-  transition: max-height 0.7s ease-in-out;
-}
+@media screen and (min-width: 768px) and (max-width: 1349.98px) {
+  .brands__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 16px;
+    overflow-y: hidden;
+    max-height: 170px;
+    transition: max-height 0.7s ease-in-out;
+  }
 
-.brands__pagination {
-  display: none;
-}
+  .brands__pagination {
+    display: none;
+  }
 
-.button-details {
-  padding-left: 16px;
-  font-size: 16px;
-}
-.button-details::before {
-  content: "";
-  background: url(../img/arrow.svg) no-repeat;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  margin-left: -15px;
-  margin-top: 5px;
-  transition: 0.7s ease-in-out;
-}
-.button-details--open::before {
-  transform: rotate(180deg);
-}
+  .button-details {
+    padding-left: 16px;
+    font-size: 16px;
+  }
+  .button-details::before {
+    content: '';
+    background: url(../img/arrow.svg) no-repeat;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 5px;
+    transition: 0.7s ease-in-out;
+  }
+  .button-details--open::before {
+    transform: rotate(180deg);
+  }
 
+  .equipment__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 16px;
+    overflow-y: hidden;
+    max-height: 170px;
+    transition: max-height 0.7s ease-in-out;
+  }
 
-.equipment__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
-  row-gap: 16px;
-  overflow-y: hidden;
-  max-height: 170px;
-  transition: max-height 0.7s ease-in-out;
-}
+  .equipment__pagination {
+    display: none;
+  }
 
-.equipment__pagination {
-  display: none;
-}
+  .prices {
+    &__swiper {
+      padding-top: 40px;
+    }
+    &__wrapper {
+      display: grid;
+    }
+    &__item {
+      width: auto;
+      height: auto;
+      border-bottom: 1px solid $decorLine;
+    }
+    &__button {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__repair {
+      min-width: 360px;
+    }
+    &__cost {
+      min-width: 100px;
+    }
+    &__period {
+      min-width: 100px;
+      
+    }
+    &__pagination {
+      display: none;
+    }
+    &__item:first-child .prices__repair::before {
+      content: 'Ремонтные услуги';
+      position: absolute;
+      top: -60px;
+      white-space: nowrap;
+      color: $gray;
+    }
+    &__item:first-child .prices__cost::before {
+      content: 'Цена';
+      position: absolute;
+      top: -60px;
+      white-space: nowrap;
+      color: $gray;
+    }
+    &__item:first-child .prices__period::before {
+      content: 'Срок';
+      position: absolute;
+      top: -60px;
+      white-space: nowrap;
+      color: $gray;
+    }
+  }
 }
