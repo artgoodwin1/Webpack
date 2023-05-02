@@ -115,5 +115,17 @@ equipmentButtonDetails.onclick = function () {
   }
 }
 
+
+
+
+// modal
+
+
+
+
+
+
+
+
 mobileservices()
 mediaQueryList.addEventListener('change', mobileservices)

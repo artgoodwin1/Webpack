@@ -18,3 +18,8 @@ headerBurger.onclick = function() {
 burgerButton.onclick = function() {
     burgerMenu.classList.add('hidden');
 }
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        burgerMenu.classList.add('hidden');
+    }
+  });

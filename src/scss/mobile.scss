@@ -52,4 +52,35 @@
     }
   }
 
+  .feedback {
+    max-width: 300px;
+
+    .modal-close {
+      top: 24px;
+      left: 20px;
+    }
+    &__form {
+      padding: 100px 16px;
+    }
+    &__title {
+      margin-left: -16px;
+    padding-left: 16px;
+    }
+  }
+
+  .ordercall {
+    max-width: 300px;
+
+    .modal-close {
+      top: 24px;
+      left: 20px;
+    }
+    &__form {
+      padding: 100px 16px;
+    }
+    &__title {
+      margin-left: -16px;
+    padding-left: 16px;
+    }
+  }
 }

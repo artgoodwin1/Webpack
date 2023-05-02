@@ -26,6 +26,11 @@ html {
 *:after {
   box-sizing: inherit;
 }
+*:focus {
+  outline-style: none;
+  outline-width: 0px;
+  outline-color: none;
+}
 body {
   margin: 0;
   font-family: "TTLakes";
@@ -51,3 +56,10 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.modal-close {
+  background-image: url('../img/burger-open.svg');
+  height: 40px;
+  width: 40px;
+}
+

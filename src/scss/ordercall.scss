@@ -1,0 +1,67 @@
+.modal.opened .ordercall {
+  transform: scale(1);
+}
+
+.ordercall {
+  position: relative;
+  z-index: 3;
+  max-width: 450px;
+  height: 100%;
+  background-color: $bgColor;
+  transform: scale(0);
+  transition: transform 0.8s;
+
+  .modal-close {
+    position: absolute;
+    top: 50px;
+    left: -60px;
+    cursor: pointer;
+  }
+
+  &__form {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
+    padding: 32px;
+  }
+  &__title {
+    border-left: 4px solid $linkFocus;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-left: -32px;
+    padding-left: 32px;
+  }
+  &__label {
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid $decorLine;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: none;
+  }
+  &__description {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__link {
+    color: $pink;
+  }
+  &__button {
+    border: none;
+    border-radius: 16px;
+    background-color: $pink;
+    width: 136px;
+    justify-self: self-end;
+    color: $bgColor;
+    padding: 2px 0px;
+    
+  }
+  &__img {
+    vertical-align: middle;
+  }
+}
