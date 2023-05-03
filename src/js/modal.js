@@ -35,8 +35,9 @@ const openFeedbackButtons = document.querySelectorAll(".open-feedback-btn")
 const modalFeedback = document.querySelector("#modal-feedback")
 const feedback = document.querySelector(".feedback")
 const closeFeedbackButton = document.querySelector(".feedback .modal-close")
-const openModalFeedback = () => {
-  modalFeedback.classList.add("opened")
+const openModalFeedback = (e) => {
+  e.preventDefault();
+  modalFeedback.classList.add("opened");
   const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
   body.style.position = 'fixed';
   body.style.top = `-${scrollY}`;

@@ -1,10 +1,5 @@
 "use strict"
-const aboutText = document.querySelector('.about__text');
-const aboutButton = document.querySelector('.about__button');
 
-aboutButton.onclick = function() {
-aboutText.classList.toggle('about__text--open');
-}
 
 
 const headerBurger = document.querySelector('.header__burger');

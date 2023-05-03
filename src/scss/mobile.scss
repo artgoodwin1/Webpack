@@ -15,9 +15,10 @@
     flex-wrap: wrap;
   }
 
-  .button-details {
+  .button-details:not(.about .button-details) {
     display: none;
   }
+  
 
   .prices {
     &__repair::before {
