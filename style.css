@@ -710,9 +710,9 @@ html {
   box-sizing: inherit; }
 
 *:focus {
-  outline-style: none;
-  outline-width: 0px;
-  outline-color: none; }
+  outline-style: auto;
+  outline-width: 2px;
+  outline-color: #7b4a97; }
 
 body {
   margin: 0;
@@ -760,6 +760,9 @@ ul {
 
 .button-details--open::before {
   transform: rotate(180deg); }
+
+.opening-modal {
+  position: fixed; }
 
 @font-face {
   font-family: 'Comic';
@@ -815,32 +818,34 @@ ul {
   .burger__link {
     color: black;
     transition: 0.7s;
+    border-left: 4px solid transparent;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     display: inline-block;
     width: 100%; }
   .burger__link:hover {
     color: chocolate;
-    border-left: 4px solid #41b4f6;
+    border-left: 4px solid transparent;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     -webkit-filter: contrast(200%);
             filter: contrast(200%); }
-  .burger__link:focus {
-    color: #7e7e82;
-    margin: 0 -16px;
-    padding: 0 16px;
-    border-left: 4px solid #41f6d7;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    font-size: 16px;
-    -webkit-filter: none;
-            filter: none; }
   .burger button:hover {
     -webkit-animation: rotate-colors 3s linear infinite;
             animation: rotate-colors 3s linear infinite; }
 
-.hidden {
+.burger__item--active .burger__link {
+  color: #7e7e82;
+  margin: 0 -16px;
+  padding: 0 16px;
+  border-left: 4px solid #41f6d7;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  font-size: 16px;
+  -webkit-filter: none;
+          filter: none; }
+
+.burger--hidden {
   transform: translateY(-100%); }
 
 .burger-footer {
@@ -946,6 +951,8 @@ ul {
     flex-wrap: nowrap; }
   .navigation__list::-webkit-scrollbar {
     opacity: 0; }
+  .navigation__item {
+    padding: 10px 0; }
   .navigation__link {
     border: 2px solid #fff;
     color: #7e7e82;
@@ -960,10 +967,8 @@ ul {
     padding: 8px 16px; }
   .navigation__link:hover {
     border-color: #b8ffec; }
-  .navigation__link:focus {
+  .navigation__item--active .navigation__link {
     border-color: aqua; }
-  .navigation__item {
-    padding: 10px 0; }
 
 .main__container {
   font-size: 14px;
@@ -1012,7 +1017,6 @@ ul {
     align-self: center;
     border: 2px solid #eaeaea;
     border-radius: 10px;
-    padding: 0 16px;
     box-sizing: border-box;
     width: 240px;
     flex-shrink: 0; }
@@ -1033,7 +1037,8 @@ ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 0 16px; }
 
 :root {
   --swiper-theme-color:#B5B6BC; }
@@ -1065,11 +1070,9 @@ ul {
     align-self: center;
     border: 2px solid #eaeaea;
     border-radius: 10px;
-    padding: 0 16px;
     box-sizing: border-box;
     width: 240px;
-    flex-shrink: 0;
-    padding: 16px; }
+    flex-shrink: 0; }
   .equipment__text {
     align-self: flex-start; }
   .equipment__img {
@@ -1089,7 +1092,8 @@ ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 16px; }
 
 .prices {
   padding: 16px;
@@ -1122,12 +1126,7 @@ ul {
     box-sizing: border-box;
     width: 260px;
     flex-shrink: 0;
-    padding: 16px;
-    cursor: -webkit-grab;
-    cursor: grab; }
-  .prices__item:active {
-    cursor: -webkit-grabbing;
-    cursor: grabbing; }
+    padding: 16px; }
   .prices__button {
     height: 100%;
     width: 100%;
@@ -1320,6 +1319,12 @@ ul {
     flex-wrap: wrap; }
   .button-details:not(.about .button-details) {
     display: none; }
+  .prices__item {
+    cursor: -webkit-grab;
+    cursor: grab; }
+  .prices__item:active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing; }
   .prices__repair::before {
     content: 'Ремонтные услуги';
     position: absolute;
@@ -1468,7 +1473,7 @@ ul {
     grid-template-columns: repeat(5, min-content);
     row-gap: 10px;
     justify-content: space-between; }
-  .hidden {
+  .burger--hidden {
     transform: translateY(0%); }
   .burger {
     position: fixed;
