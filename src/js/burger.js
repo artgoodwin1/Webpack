@@ -21,4 +21,4 @@ function escapeBurger(e) {
 
 headerBurger.addEventListener('click', removeHidden)
 burgerButton.addEventListener('click', addHidden)
-window.addEventListener('keydown', escapeBurger)
+document.addEventListener('keydown', escapeBurger)

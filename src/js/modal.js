@@ -76,16 +76,16 @@ modalFeedback.addEventListener('click', closeIsClickModal);
 
 function escapeModal(e) {
   if (e.key === "Escape") {
-    closeModalOrdercall()
     closeModalFeedback()
+    closeModalOrdercall()
   }
 }
 
-window.addEventListener('keydown', escapeModal);
+document.addEventListener('keydown', escapeModal);
 
 
 function setScrollY() {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
 }
 
-window.addEventListener('scroll', setScrollY);
+document.addEventListener('scroll', setScrollY);
