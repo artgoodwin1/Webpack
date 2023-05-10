@@ -5,14 +5,14 @@ Swiper.use([Navigation, Pagination])
 
 const mediaQuery = '(max-width: 768px)'
 const mediaQueryList = window.matchMedia(mediaQuery)
-const brandsSwiper = document.querySelector('.brands__swiper')
-let mySwiper
-let mySwiper2
-let mySwiper3
+const checkSwiper = document.querySelector('.brands__swiper')
+let brandsSwiper
+let equipmentSwiper
+let pricesSwiper
 
 function mobileservices() {
   if (mediaQueryList.matches) {
-    mySwiper = new Swiper('.brands__swiper', {
+    brandsSwiper = new Swiper('.brands__swiper', {
       direction: 'horizontal',
       loop: true,
       
@@ -34,7 +34,7 @@ function mobileservices() {
       }
     })
 
-    mySwiper2 = new Swiper('.equipment__swiper', {
+    equipmentSwiper = new Swiper('.equipment__swiper', {
       direction: 'horizontal',
       loop: true,
       
@@ -56,7 +56,7 @@ function mobileservices() {
       }
     })
 
-    mySwiper3 = new Swiper('.prices__swiper', {
+    pricesSwiper = new Swiper('.prices__swiper', {
         direction: 'horizontal',
         loop: true,
         
@@ -77,26 +77,14 @@ function mobileservices() {
           prevEl: '.swiper-button-prev'
         }
       })
-  } else if (brandsSwiper.classList.contains('swiper-initialized')) {
+  } else if (checkSwiper.classList.contains('swiper-initialized')) {
     {
-      mySwiper.destroy()
-      mySwiper2.destroy()
-      mySwiper3.destroy()
+      brandsSwiper.destroy()
+      equipmentSwiper.destroy()
+      pricesSwiper.destroy()
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 mobileservices()

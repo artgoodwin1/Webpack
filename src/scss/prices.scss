@@ -39,10 +39,6 @@
   width: 260px;
   flex-shrink: 0;
   padding: 16px;
-  cursor: grab;
-}
-&__item:active {
-  cursor: grabbing;
 }
 &__button {
   height:100%;

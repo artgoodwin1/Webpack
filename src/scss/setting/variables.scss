@@ -9,7 +9,7 @@ $navHover: #b8ffec;
 $navFocus: aqua;
 $decorLine: #eaeaea;
 $pink: #FF3E79;
-
+$focus: #7b4a97;
 
 @keyframes rotate-colors {
   100% {
@@ -27,9 +27,9 @@ html {
   box-sizing: inherit;
 }
 *:focus {
-  outline-style: none;
-  outline-width: 0px;
-  outline-color: none;
+  outline-style:auto;
+  outline-width: 2px;
+  outline-color: $focus;
 }
 body {
   margin: 0;
@@ -81,3 +81,8 @@ ul {
 .button-details--open::before {
   transform: rotate(180deg);
 }
+
+.opening-modal {
+  position: fixed;
+}
+

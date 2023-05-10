@@ -3,14 +3,19 @@ const openOrdercallButtons = document.querySelectorAll(".open-ordercall-btn")
 const modalOrdercall = document.querySelector("#modal-ordercall")
 const ordercall = document.querySelector(".ordercall")
 const closeOrdercallButton = document.querySelector(".ordercall .modal-close")
+const modalFocus = document.querySelector(".prices__offer")
+const afterOrdercallFocus = document.querySelector(".header__repair")
+
+
 const openModalOrdercall = () => {
   modalOrdercall.classList.add("opened")
-  body.style.position = 'fixed'
+  body.classList.add("opening-modal")
+  modalFocus.focus()
 }
 const closeModalOrdercall = () => {
   modalOrdercall.classList.remove("opened")
-  body.style.position = ''
-  body.style.top = ''
+  body.classList.remove("opening-modal")
+  afterOrdercallFocus.focus()
 }
 
 for(let openOrdercallButton of openOrdercallButtons){
@@ -19,35 +24,28 @@ openOrdercallButton.addEventListener("click", openModalOrdercall)
 
 closeOrdercallButton.addEventListener("click", closeModalOrdercall)
 
-ordercall.addEventListener('click', event => {
-  event._isClickWithInModal = true;
-});
-modalOrdercall.addEventListener('click', event => {
-  if (event._isClickWithInModal) return;
-  event.currentTarget.classList.remove('opened');
-  body.style.position = ''
-  body.style.top = ''
-});
-
-
 
 const openFeedbackButtons = document.querySelectorAll(".open-feedback-btn")
 const modalFeedback = document.querySelector("#modal-feedback")
 const feedback = document.querySelector(".feedback")
 const closeFeedbackButton = document.querySelector(".feedback .modal-close")
+
 const openModalFeedback = (e) => {
   e.preventDefault();
   modalFeedback.classList.add("opened");
   const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-  body.style.position = 'fixed';
+  body.classList.add("opening-modal");
   body.style.top = `-${scrollY}`;
+  modalFocus.focus()
 }
+
 const closeModalFeedback = () => {
   modalFeedback.classList.remove("opened")
   const scrollY = body.style.top;
-  body.style.position = '';
+  body.classList.remove("opening-modal");
   body.style.top = '';
   window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  modalFocus.focus()
 }
 
 for(let openFeedbackButton of openFeedbackButtons){
@@ -56,26 +54,38 @@ for(let openFeedbackButton of openFeedbackButtons){
   
 closeFeedbackButton.addEventListener("click", closeModalFeedback)
 
-feedback.addEventListener('click', event => {
-  event._isClickWithInModal = true;
-});
-modalFeedback.addEventListener('click', event => {
-  if (event._isClickWithInModal) return;
-  event.currentTarget.classList.remove('opened');
+const isClickModal = (e) => {
+  e._isClickWithInModal = true;
+}
+
+const closeIsClickModal = (e) => {
+  if (e._isClickWithInModal) return;
+  e.currentTarget.classList.remove('opened');
   const scrollY = body.style.top;
-  body.style.position = '';
+  body.classList.remove("opening-modal");
   body.style.top = '';
   window.scrollTo(0, parseInt(scrollY || '0') * -1);
-});
+}
+
+ordercall.addEventListener('click', isClickModal);
+modalOrdercall.addEventListener('click', closeIsClickModal);
+
+feedback.addEventListener('click', isClickModal);
+modalFeedback.addEventListener('click', closeIsClickModal);
 
 
-window.addEventListener('keydown', (e) => {
+function escapeModal(e) {
   if (e.key === "Escape") {
     closeModalOrdercall()
     closeModalFeedback()
   }
-});
+}
 
-window.addEventListener('scroll', () => {
+window.addEventListener('keydown', escapeModal);
+
+
+function setScrollY() {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-});
+}
+
+window.addEventListener('scroll', setScrollY);

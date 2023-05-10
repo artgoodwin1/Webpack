@@ -21,6 +21,12 @@
   
 
   .prices {
+    &__item {
+      cursor: grab;
+    }
+    &__item:active {
+      cursor: grabbing;
+    }
     &__repair::before {
       content: 'Ремонтные услуги';
       position: absolute;

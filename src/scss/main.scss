@@ -26,6 +26,9 @@
   &__list::-webkit-scrollbar {
     opacity: 0;
   }
+  &__item {
+    padding: 10px 0;
+  }
   &__link {
     border: 2px solid $bgColor;
     color: $gray;
@@ -39,12 +42,9 @@
   }
   &__link:hover {
     border-color: $navHover;
-  }
-  &__link:focus {
+  } 
+  &__item--active .navigation__link {
     border-color: $navFocus;
-  }
-  &__item {
-    padding: 10px 0;
   }
 }
 

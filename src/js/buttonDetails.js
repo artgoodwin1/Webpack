@@ -9,7 +9,7 @@ const equipmentButtonDetails = document.querySelector(
   '.equipment .button-details'
 )
 
-aboutButton.onclick = function() {
+function extendAbout() {
   aboutText.classList.toggle('brands__wrapper--extended')
   aboutButton.classList.toggle('button-details--open')
 
@@ -20,7 +20,10 @@ aboutButton.onclick = function() {
   }
 }
 
-brandsButtonDetails.onclick = function () {
+aboutButton.addEventListener('click', extendAbout)
+
+
+function extendBrands() {
   brandsWrapper.classList.toggle('brands__wrapper--extended')
   brandsButtonDetails.classList.toggle('button-details--open')
 
@@ -31,7 +34,9 @@ brandsButtonDetails.onclick = function () {
   }
 }
 
-equipmentButtonDetails.onclick = function () {
+brandsButtonDetails.addEventListener('click', extendBrands)
+
+function extendEquipment () {
   equipmentWrapper.classList.toggle('brands__wrapper--extended')
   equipmentButtonDetails.classList.toggle('button-details--open')
 
@@ -41,3 +46,5 @@ equipmentButtonDetails.onclick = function () {
     equipmentButtonDetails.textContent = 'Показать всё'
   }
 }
+
+equipmentButtonDetails.addEventListener('click', extendEquipment)

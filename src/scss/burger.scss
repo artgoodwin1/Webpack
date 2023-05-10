@@ -34,6 +34,7 @@
   &__link {
     color: black;
     transition: 0.7s;
+    border-left: 4px solid transparent;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     display: inline-block;
@@ -43,28 +44,27 @@
   &__link:hover {
     color: $chocolate;
 
-    border-left: 4px solid $linkHover;
+    border-left: 4px solid transparent;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     filter: contrast(200%);
-  }
-  &__link:focus {
-    color: $gray;
-    margin: 0 -16px;
-    padding: 0 16px;
-
-    border-left: 4px solid $linkFocus;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    font-size: 16px;
-    filter: none;
   }
   & button:hover {
     animation: rotate-colors 3s linear infinite;
   }
 }
+.burger__item--active .burger__link {
+  color: $gray;
+  margin: 0 -16px;
+  padding: 0 16px;
 
-.hidden {
+  border-left: 4px solid $linkFocus;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  font-size: 16px;
+  filter: none;
+}
+.burger--hidden {
   transform: translateY(-100%);
 }
 
